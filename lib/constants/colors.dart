@@ -8,7 +8,11 @@ class AppColors{
   static const appPurple = Color(0xFF462B8A);
 
 static const appBrown = Color(0xFFE1B831); 
+
+static const appBrownLight =Color.fromRGBO(242, 219, 130,1);
   // 60% opacity black (alpha = 0x99)
   static const appBlack60 = Color(0x33000000);
+  static const backgroundColor=Color.fromRGBO(19, 24, 30, 1);
+  static const backgroundColor1=  Color.fromRGBO(24, 32, 36, 1);
    static const appBlack = Color(0x99000000);
 }

@@ -1,5 +1,6 @@
 import 'package:etotronics/pages/hero_section.dart';
 import 'package:etotronics/pages/partners.dart';
+import 'package:etotronics/pages/whatWeDo.dart';
 import 'package:etotronics/widgets/button.dart';
 import 'package:flutter/material.dart';
 
@@ -52,13 +53,19 @@ class _LandingPageState extends State<LandingPage> {
         children: [
           const HeroSection(),
 
-          const SizedBox(height: 30),
+          const SizedBox(height: 100),
           IntroButton(
               text: "Book an Intro call",
               onPressed: () {
                 // Handle button press
               }),
-         const Partners(),
+
+          const SizedBox(height: 100),
+          const Align(alignment: Alignment.centerLeft, child: Partners()),
+
+          const SizedBox(height: 100),
+
+          const WhatWeDo()
           // ContactUs()
         ],
       ),

@@ -15,25 +15,28 @@ class IntroButton extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.elliptical(10, 10)),
-                          // side: BorderSide(width: 0
-                          //     // color:
-                          //     ),
+    return SizedBox(
+      height: 60,
+      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.elliptical(10, 10)),
+                            // side: BorderSide(width: 0
+                            //     // color:
+                            //     ),
+                          ),
+                          backgroundColor: AppColors.appBrown,
                         ),
-                        backgroundColor: AppColors.appBrown,
+                        onPressed: onPressed ?? () {},
+                        child:  Text(
+                          text,
+                         style: GoogleFonts.poppins(
+                          fontSize: 15,
+                          color: AppColors.appBlack,
+                          fontWeight: FontWeight.w400,
+                        ),
+                        ),
                       ),
-                      onPressed: onPressed ?? () {},
-                      child:  Text(
-                        text,
-                       style: GoogleFonts.poppins(
-                        fontSize: 15,
-                        color: AppColors.appBlack,
-                        fontWeight: FontWeight.w400,
-                      ),
-                      ),
-                    );
+    );
   }
 }

@@ -44,7 +44,7 @@ class _HeroSectionState extends State<HeroSection> {
     return Stack(
               children: [
                 SizedBox(
-                  height: MediaQuery.of(context).size.height,
+                  height: MediaQuery.of(context).size.height*0.5,
                   width: double.infinity,
                   child: _controller.value.isInitialized
                       ? FittedBox(
@@ -84,7 +84,7 @@ class _HeroSectionState extends State<HeroSection> {
                           Text(
                             """Crafting World-Class Digital Experiences
 Precision engineering, refined design, and
- battle-tested performance—built to
+battle-tested performance—built to
                  power your business.""",
                             style: GoogleFonts.poppins(
                                 fontSize: 20, color: AppColors.appWhite),
@@ -104,7 +104,4 @@ Precision engineering, refined design, and
               ],
             );
   }
-
-
-  
 }
