@@ -19,7 +19,7 @@ class MainLayout extends StatelessWidget {
         preferredSize: const Size.fromHeight(70),
         child: Container(
           //change it to transparent white
-          color: AppColors.appBlack,
+          color: AppColors.backgroundColor,
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -15,6 +15,8 @@ class _PartnersState extends State<Partners> {
     //patners and statistics section
     return Container(
       width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height,
+      padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: AppColors.backgroundColor,
         borderRadius: BorderRadius.circular(12),
@@ -25,6 +27,7 @@ class _PartnersState extends State<Partners> {
           Container(
             // height: MediaQuery.of(context).size.height*0.5,
             width: MediaQuery.of(context).size.width * 0.55,
+             height: MediaQuery.of(context).size.height*0.3,
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
               color: AppColors.backgroundColor1,
@@ -70,11 +73,11 @@ class _PartnersState extends State<Partners> {
               ],
             ),
           ),
-          const SizedBox(width: 10),
+          const SizedBox(width: 40),
 
           // statistics section
           Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 "10+",
@@ -94,10 +97,10 @@ class _PartnersState extends State<Partners> {
               ),
             ],
           ),
-
-          const SizedBox(width: 40),
-
+          const SizedBox(width: 20),
+        // const  Spacer(),
           Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 "250M+",

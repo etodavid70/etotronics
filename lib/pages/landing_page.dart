@@ -1,3 +1,4 @@
+import 'package:etotronics/constants/colors.dart';
 import 'package:etotronics/pages/hero_section.dart';
 import 'package:etotronics/pages/partners.dart';
 import 'package:etotronics/pages/whatWeDo.dart';
@@ -19,13 +20,13 @@ class _LandingPageState extends State<LandingPage> {
 
   Widget buildSection({
     required String title,
-    required Color color,
+
     required String text,
   }) {
     return Container(
       height: MediaQuery.of(context).size.height,
       width: double.infinity,
-      color: color,
+      color: AppColors.backgroundColor,
       child: Center(
         child: Padding(
           padding: const EdgeInsets.all(32.0),
@@ -63,7 +64,7 @@ class _LandingPageState extends State<LandingPage> {
           const SizedBox(height: 100),
           const Align(alignment: Alignment.centerLeft, child: Partners()),
 
-          const SizedBox(height: 100),
+          // const SizedBox(height: 100),
 
           const WhatWeDo()
           // ContactUs()

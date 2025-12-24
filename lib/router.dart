@@ -12,7 +12,7 @@ final GoRouter router = GoRouter(
       path: '/',
       name: 'home',
       builder: (context, state) => const MainLayout(
-        child: LandingPage(),
+        child: LandingPage( ),
       ),
     ),
     
