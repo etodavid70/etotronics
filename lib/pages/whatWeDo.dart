@@ -16,101 +16,104 @@ class _WhatWeDoState extends State<WhatWeDo> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      // height: MediaQuery.of(context).size.height,
+
       padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.backgroundColor,
-        borderRadius: BorderRadius.circular(12),
+        // borderRadius: BorderRadius.circular(12),
       ),
-      child: Column(
+
+      //main row for what we do section
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "What We can  do for you",
-            style: GoogleFonts.poppins(
-              fontSize: 30,
-              color: Colors.white,
-              fontWeight: FontWeight.w600,
-            ),
-            textAlign: TextAlign.center,
-          ),
-
-          // Row(children: [
-
-          // ]),
-
-          // const SizedBox(width: 20),
-
-          const SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          //column for text and image cards
+          Column(
             children: [
-              ImageTextCard(
-                imagePath: "assets/images/sdk.png",
-                title: """Custom SDK & 
+              Text(
+                "What We can  do for you",
+                style: GoogleFonts.poppins(
+                  fontSize: 30,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w300,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 20),
+              Row(
+                children: [
+                  ImageTextCard(
+                    imagePath: "assets/images/sdk.png",
+                    title: """Custom SDK & 
     API Engineering
     """, // imageHeight: 50,
-                onTap: () {},
-              ),
-              const SizedBox(width: 20),
-              ImageTextCard(
-                imagePath: "assets/images/embedded.png",
-                title: """Android & Linux Based
+                    onTap: () {},
+                  ),
+                  const SizedBox(width: 20),
+                  ImageTextCard(
+                    imagePath: "assets/images/embedded.png",
+                    title: """Android & Linux Based
 Application Development""",
-                onTap: () {},
+                    onTap: () {},
+                  ),
+                ],
               ),
-              const SizedBox(width: 20),
-              ImageTextCard(
-                imagePath: "assets/images/cloud.png",
-                title: """Cloud Infrastructure, 
+              const SizedBox(height: 20),
+              Row(
+                children: [
+                  ImageTextCard(
+                    imagePath: "assets/images/cloud.png",
+                    title: """Cloud Infrastructure,
 DevOps & API Security""",
-                onTap: () {},
-              ),
-              const SizedBox(width: 20),
-              ImageTextCard(
-                imagePath: "assets/images/apps.png",
-                title: """Web and Mobile
+                    onTap: () {},
+                  ),
+                  const SizedBox(width: 20),
+                  ImageTextCard(
+                    imagePath: "assets/images/apps.png",
+                    title: """Web and Mobile
 Application Development""",
-                onTap: () {},
-              ),
+                    onTap: () {},
+                  ),
+                ],
+              )
             ],
           ),
+          const SizedBox(width: 20),
 
-
-        const  SizedBox(height: 100),
-          Row(
+          Column(
             children: [
-              ClipRRect(
-                borderRadius: const BorderRadiusGeometry.all(Radius.circular(128)),
-                child: Image.asset(
-                  "assets/images/software.png",
-                  height: 300,
-                  width: 300,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              const SizedBox(width: 40),
-
-              // Spacer(),
+              const SizedBox(height: 60),
               Text(
-                AppText.whatWedo,
-                style: GoogleFonts.poppins(
-                  fontSize: 25,
+                "We have a super",
+                style: GoogleFonts.spaceGrotesk(
+                  fontSize: 50,
                   color: Colors.white,
                   fontWeight: FontWeight.w900,
                 ),
-                textAlign: TextAlign.left,
+                textAlign: TextAlign.center,
               ),
-              //  Text(
-              //   AppText.t100,
-              //   style: GoogleFonts.poppins(
-              //     fontSize: 100,
-              //     // color: Colors.white,
-              //     fontWeight: FontWeight.w900,
-              //   ),
-              //   textAlign: TextAlign.left,
-              // )
+              // const SizedBox(height: 60),
+              Text(
+                "effecient team 💪🏼 💯",
+                style: GoogleFonts.spaceGrotesk(
+                  fontSize: 50,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w900,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 50),
+              Text(
+                AppText.whatWedo,
+                style: GoogleFonts.poppins(
+                  fontSize: 20,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
+                textAlign: TextAlign.center,
+              ),
             ],
-          )
+          ),
         ],
       ),
     );

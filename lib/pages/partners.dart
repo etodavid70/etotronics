@@ -17,9 +17,9 @@ class _PartnersState extends State<Partners> {
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.backgroundColor,
-        borderRadius: BorderRadius.circular(12),
+        // borderRadius: BorderRadius.circular(12),
       ),
       child: Row(
         children: [
@@ -27,7 +27,7 @@ class _PartnersState extends State<Partners> {
           Container(
             // height: MediaQuery.of(context).size.height*0.5,
             width: MediaQuery.of(context).size.width * 0.55,
-             height: MediaQuery.of(context).size.height*0.3,
+            height: MediaQuery.of(context).size.height * 0.3,
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
               color: AppColors.backgroundColor1,
@@ -40,36 +40,67 @@ class _PartnersState extends State<Partners> {
                   style: GoogleFonts.poppins(
                       fontSize: 20, color: AppColors.appWhite),
                 ),
-                const SizedBox(height: 20),
-                const Row(
-                  spacing: 20, // horizontal spacing
-                  // runSpacing: 20,    // vertical spacing
-                  // alignment: WrapAlignment.spaceAround,
+
+                // const SizedBox(height: 10),
+                Row(
+                  // spacing: 20, // horizontal spacing
+
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Icon(Icons.home),
-                    Icon(Icons.person),
-                    Icon(Icons.settings),
-                    Icon(Icons.notifications),
-                    Icon(Icons.lock),
-                    Icon(Icons.help),
+                    SizedBox(
+                      height: 100,
+                      width: 100,
+                      child: Image.asset("assets/images/flobooks.png"),
+                    ),
+                    SizedBox(
+                      height: 100,
+                      width: 100,
+                      child: Image.asset("assets/images/mega.png"),
+                    ),
+
+                    SizedBox(
+                      height: 100,
+                      width: 100,
+                      child: Image.asset("assets/images/polaris.png"),
+                    ),
+
+                    SizedBox(
+                      height: 100,
+                      width: 100,
+                      child: Image.asset("assets/images/techgeospartial.png"),
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "TECH",
+                          style: GoogleFonts.montserrat(
+                              fontSize: 8,
+                              color: AppColors.appGreen,
+                              // fontStyle: FontStyle.italic,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          "GEOSPATIAL",
+                          style: GoogleFonts.montserrat(
+                              fontSize: 8,
+                              color: AppColors.appBlue,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    // Text(
+                    //   "GEOSPATIAL",
+                    //   style: GoogleFonts.montserrat(
+                    //       fontSize: 8,
+                    //       color: AppColors.appBlue,
+                    //       fontWeight: FontWeight.bold),
+                    // ),
                   ],
                 ),
-                const SizedBox(height: 20),
-                const Row(
-                  spacing: 20, // horizontal spacing
-                  // runSpacing: 20,    // vertical spacing
-                  // alignment: WrapAlignment.spaceAround,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Icon(Icons.home),
-                    Icon(Icons.person),
-                    Icon(Icons.settings),
-                    Icon(Icons.notifications),
-                    Icon(Icons.lock),
-                    Icon(Icons.help),
-                  ],
-                ),
+
+                Row(
+                  children: [],
+                )
               ],
             ),
           ),
@@ -98,7 +129,7 @@ class _PartnersState extends State<Partners> {
             ],
           ),
           const SizedBox(width: 20),
-        // const  Spacer(),
+          // const  Spacer(),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

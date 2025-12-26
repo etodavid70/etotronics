@@ -3,12 +3,17 @@
 class AppText{
 
 static const whatWedo= """
-we build bespoke software solutions
+We build bespoke software solutions
 that gives your business the edge it needs to 
-thrive in today's digital landscape. 
-Our team is top notch, compact and super-efficient.
+thrive in today's digital landscape.
+
+With a proven, highly efficient team, 
+we partner with businesses to design, 
+develop, and deploy reliable digital 
+solutions that improve operations, 
+enhance customer experience, and 
+accelerate growth.
 """;
 
-static const t100="💯";
 
 }

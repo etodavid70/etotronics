@@ -1,4 +1,5 @@
 import 'package:etotronics/constants/colors.dart';
+import 'package:etotronics/pages/contact_us.dart';
 import 'package:etotronics/pages/hero_section.dart';
 import 'package:etotronics/pages/partners.dart';
 import 'package:etotronics/pages/whatWeDo.dart';
@@ -66,8 +67,8 @@ class _LandingPageState extends State<LandingPage> {
 
           // const SizedBox(height: 100),
 
-          const WhatWeDo()
-          // ContactUs()
+          const WhatWeDo(),
+          ContactUs()
         ],
       ),
     );

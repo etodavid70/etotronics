@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 class MainLayout extends StatelessWidget {
   final Widget child;
 
@@ -19,7 +18,9 @@ class MainLayout extends StatelessWidget {
         preferredSize: const Size.fromHeight(70),
         child: Container(
           //change it to transparent white
-          color: AppColors.backgroundColor,
+          color: Colors.black.withOpacity(0.1),
+
+          //  AppColors.backgroundColor,
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -31,10 +32,10 @@ class MainLayout extends StatelessWidget {
                 child: Row(
                   children: [
                     SizedBox(
-                        height: 200,
-                        width: 150,
-                        child: Image.asset("assets/images/logo.png")),
-                   
+                      height: 200,
+                      width: 150,
+                      child: Image.asset("assets/images/logo.png"),
+                    ),
                   ],
                 ),
               ),
@@ -43,12 +44,13 @@ class MainLayout extends StatelessWidget {
               Row(
                 children: [
                   // _NavItem(label: 'Home', route: '/'),
-                  
-                    const SizedBox(width: 20),
-                    IntroButton(text:   'Book an Intro call', onPressed: () {
-                      context.go("/"); // GoRouter navigation
-                    }),
-                  
+
+                  const SizedBox(width: 20),
+                  IntroButton(
+                      text: 'Book an Intro call',
+                      onPressed: () {
+                        context.go("/"); // GoRouter navigation
+                      }),
                 ],
               ),
             ],
@@ -59,4 +61,3 @@ class MainLayout extends StatelessWidget {
     );
   }
 }
-
