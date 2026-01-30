@@ -1,5 +1,5 @@
 import 'package:etotronics/main_layout.dart';
-import 'package:etotronics/pages/landing_page.dart';
+import 'package:etotronics/landing_page/landing_page.dart';
 import 'package:go_router/go_router.dart';
 
 // router.dart

@@ -1,4 +1,5 @@
 import 'package:etotronics/constants/colors.dart';
+import 'package:etotronics/core/utils.dart';
 import 'package:etotronics/widgets/button.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
@@ -35,12 +36,16 @@ class _HeroSectionState extends State<HeroSection> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        SizedBox(
-          height: MediaQuery.of(context).size.height,
-          width: double.infinity,
-          child: _controller.value.isInitialized
+    final height = MediaQuery.of(context).size.height;
+
+    return SizedBox(
+      height: height,
+      width: double.infinity,
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          // 🎥 VIDEO
+          _controller.value.isInitialized
               ? FittedBox(
                   fit: BoxFit.cover,
                   child: SizedBox(
@@ -50,44 +55,53 @@ class _HeroSectionState extends State<HeroSection> {
                   ),
                 )
               : const Center(child: CircularProgressIndicator()),
-        ),
-        Container(
-          height: MediaQuery.of(context).size.height,
-          color: Colors.black.withOpacity(0.1),
-        ),
-        Center(
-          child: SizedBox(
-            height: MediaQuery.of(context).size.height,
-            child: Center(
+
+          // 🌑 DARK OVERLAY (NOT FULLY OPAQUE)
+          Container(
+            color: AppColors.backgroundColor.withOpacity(0.65),
+          ),
+
+          
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.all(20),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    """Engineering Software 
-        That Powers 
-        the Future 💪🏼""",
+                    """Engineering Software
+That Powers
+the Future 💪🏼""",
+                    textAlign: TextAlign.center,
                     style: GoogleFonts.poppins(
-                      fontSize: 40,
+                      fontSize: isMobile(context) ? 28 : 40,
                       color: Colors.white,
                       fontWeight: FontWeight.w900,
                     ),
-                    textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 20),
                   Text(
                     """Crafting World-Class Digital Experiences
 Precision engineering, refined design, and
 battle-tested performance—built to
-                 power your business.""",
+power your business.""",
+                    textAlign: TextAlign.center,
                     style: GoogleFonts.poppins(
-                        fontSize: 20, color: AppColors.appWhite),
+                      fontSize: isMobile(context) ? 16 : 20,
+                      color: AppColors.appWhite,
+                    ),
+                  ),
+                  const SizedBox(height: 30),
+                  IntroButton(
+                    text: "Book an Intro call",
+                    onPressed: () {},
                   ),
                 ],
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
